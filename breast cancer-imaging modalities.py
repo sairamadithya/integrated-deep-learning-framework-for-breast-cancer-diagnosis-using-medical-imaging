@@ -27,7 +27,7 @@ if dia_opt=='Digital Infrared Thermal Imaging (DITI)':
             st.subheader('The user is requested to upload the infrared image of the breast.')
             @st.cache(allow_output_mutation=True)
             def load_model():
-                model=tf.keras.models.load_model(r"C:\Users\sairam\Desktop\final yr project models\breast thermal classification (2.4).h5")
+                model=tf.keras.models.load_model(r"breast thermal classification (2.4).h5")
                 return model
             with st.spinner('Model is being loaded..'):
                 thermal_model=load_model()
@@ -58,7 +58,7 @@ elif dia_opt=='Ultrasound':
             st.subheader('The user is requested to upload the ultrasound image of the breast.')
             @st.cache(allow_output_mutation=True)
             def load_model():
-                model=tf.keras.models.load_model(r"C:\Users\sairam\Desktop\final yr project models\breast ultrasound classification (2.4).h5")
+                model=tf.keras.models.load_model(r"breast ultrasound classification (2.4).h5")
                 return model
             with st.spinner('Model is being loaded..'):
                 ultra_model=load_model()
@@ -90,7 +90,7 @@ elif dia_opt=='Digital Mammography (DM)':
             st.subheader('The user is requested to upload the mammogram image of the breast.')
             @st.cache(allow_output_mutation=True)
             def load_model():
-                model=tf.keras.models.load_model(r"C:\Users\sairam\Desktop\final yr project models\mammo BM prediction pgm data (2.4).h5")
+                model=tf.keras.models.load_model(r"mammo BM prediction pgm data (2.4).h5")
                 return model
             with st.spinner('Model is being loaded..'):
                 mammo_model=load_model()
@@ -121,7 +121,7 @@ elif dia_opt=='Digital Breast Tomosynthesis (DBT)':
             st.subheader('The user is requested to upload the bmp version of the DBT image.')
             @st.cache(allow_output_mutation=True)
             def load_model():
-                model=tf.keras.models.load_model("C:\\Users\\sairam\\Desktop\\final yr project models\\DBT normal abnormal (2.4).h5")
+                model=tf.keras.models.load_model(r"DBT normal abnormal (2.4).h5")
                 return model
             with st.spinner('Model is being loaded..'):
                 model=load_model()
@@ -151,7 +151,7 @@ elif dia_opt=='Digital Breast Tomosynthesis (DBT)':
             if st.button('Click to get the severity'):
                     @st.cache(allow_output_mutation=True)
                     def load_model():
-                        model=tf.keras.models.load_model(r"C:\Users\sairam\Desktop\final yr project models\mammo BM prediction pgm data (2.4).h5")
+                        model=tf.keras.models.load_model(r"mammo BM prediction pgm data (2.4).h5")
                         return model
                     with st.spinner('Model is being loaded..'):
                         model=load_model()
@@ -178,7 +178,7 @@ elif dia_opt=='Dynamic Contrast Enhanced Magnetic Resonance Imaging (DCE-MRI)':
             st.subheader('The user is requested to upload the DCE-MRI image of the breast.')
             @st.cache(allow_output_mutation=True)
             def load_model():
-                model=tf.keras.models.load_model(r"C:\Users\sairam\Desktop\final yr project models\DCE breast cancer detection.h5")
+                model=tf.keras.models.load_model(r"DCE breast cancer detection.h5")
                 return model
             with st.spinner('Model is being loaded..'):
                 dce_model=load_model()
@@ -210,7 +210,7 @@ elif dia_opt=='Biopsy= basic confirmation':
             st.subheader('The user is requested to upload the histopathological image of the breast obtained from biopsy.')
             @st.cache(allow_output_mutation=True)
             def load_model():
-                model=tf.keras.models.load_model(r"C:\Users\sairam\Desktop\final yr project models\biopsy-basic.h5")
+                model=tf.keras.models.load_model(r"biopsy-basic.h5")
                 return model
             with st.spinner('Model is being loaded..'):
                 bio_model=load_model()
@@ -242,7 +242,7 @@ elif dia_opt=='Biopsy= IDC confirmation':
             st.subheader('The user is requested to upload the histopathological image of the breast obtained from biopsy.')
             @st.cache(allow_output_mutation=True)
             def load_model():
-                model=tf.keras.models.load_model(r"C:\Users\sairam\Desktop\final yr project models\IDC-biopsy.h5")
+                model=tf.keras.models.load_model(r"IDC-biopsy.h5")
                 return model
             with st.spinner('Model is being loaded..'):
                 idc_model=load_model()
