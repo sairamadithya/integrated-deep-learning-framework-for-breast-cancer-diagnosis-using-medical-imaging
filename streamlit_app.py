@@ -47,11 +47,11 @@ if dia_opt=='Digital Infrared Thermal Imaging (DITI)':
                     if a<0.50:
                         st.success('The subject under consideration is observed to be NORMAL.')
                         b=round(np.amax(predictions) * 100, 2)
-                        st.write("confidence score"+str(b))
+                        st.write("confidence score "+str(b))
                     else:
                         st.error('The subject under consideration is suspected to have breast cancer.')
                         b=round(np.amax(predictions) * 100, 2)
-                        st.write("confidence score"+str(b))
+                        st.write("confidence score "+str(b))
 elif dia_opt=='Ultrasound':
             st.subheader('This tool is to diagnose and predict for the presence of breast cancer based on ultrasound imaging.')
             st.subheader('The user is requested to upload the ultrasound image of the breast.')
@@ -79,11 +79,11 @@ elif dia_opt=='Ultrasound':
                     if a<0.50:
                         st.success('The subject under consideration is suspected to have BENIGN breast cancer.')
                         b=round(np.amax(predictions) * 100, 2)
-                        st.write("confidence score"+str(b))
+                        st.write("confidence score "+str(b))
                     else:
                         st.error('The subject under consideration is suspected to have MALIGNANT breast cancer.')
                         b=round(np.amax(predictions) * 100, 2)
-                        st.write("confidence score"+str(b))
+                        st.write("confidence score "+str(b))
 elif dia_opt=='Digital Mammography (DM)':
             st.subheader('This tool is to diagnose and predict for the presence of breast cancer based on mammogram imaging.')
             st.subheader('The user is requested to upload the mammogram image of the breast.')
@@ -110,11 +110,11 @@ elif dia_opt=='Digital Mammography (DM)':
                     if a<0.50:
                         st.success('The subject under consideration is suspected to have BENIGN breast cancer.')
                         b=round(np.amax(predictions) * 100, 2)
-                        st.write("confidence score"+str(b))
+                        st.write("confidence score "+str(b))
                     else:
                         st.error('The subject under consideration is suspected to have MALIGNANT breast cancer.')
                         b=round(np.amax(predictions) * 100, 2)
-                        st.write("confidence score"+str(b))
+                        st.write("confidence score "+str(b))
 elif dia_opt=='Digital Breast Tomosynthesis (DBT)':
             st.subheader('This tool is to diagnose for breast abnormalities based on DBT images.')
             st.subheader('The user is requested to upload the bmp version of the DBT image.')
@@ -141,12 +141,12 @@ elif dia_opt=='Digital Breast Tomosynthesis (DBT)':
                     if a>0.50:
                         st.success('The subject under observation appears to be normal.')
                         b=round(np.amax(predictions) * 100, 2)
-                        st.write("confidence score"+str(b))
+                        st.write("confidence score "+str(b))
                 #st.error('The subject under consideration is suspected to have breast abnormalities. There are chances that the abnormality is breast cancer. Please ensure that you consult with an oncologist for further diagnosis.')
                 else:
                         st.error('The subject under consideration is suspected to have breast abnormalities. There are chances that the abnormality is breast cancer.')
                         b=round(np.amax(predictions) * 100, 2)
-                        st.write("confidence score"+str(b))
+                        st.write("confidence score "+str(b))
             if st.button('Click to get the severity'):
                     @st.cache(allow_output_mutation=True)
                     def load_model():
@@ -167,11 +167,11 @@ elif dia_opt=='Digital Breast Tomosynthesis (DBT)':
                     if a.any()>0.50:
                         st.error('The subject under consideration is observed to be MALIGNANT.')
                         b=round(np.amax(predictions) * 100, 2)
-                        st.write("confidence score"+str(b))
+                        st.write("confidence score "+str(b))
                     else:
                         st.success('The subject under consideration is observed to be BENIGN.')
                         b=round(np.amax(predictions) * 100, 2)
-                        st.write("confidence score"+str(b))
+                        st.write("confidence score "+str(b))
 elif dia_opt=='Dynamic Contrast Enhanced Magnetic Resonance Imaging (DCE-MRI)':
             st.subheader('This tool is to diagnose and predict for the presence of breast cancer based on DCE-MRI imaging.')
             st.subheader('The user is requested to upload the DCE-MRI image of the breast.')
@@ -199,11 +199,11 @@ elif dia_opt=='Dynamic Contrast Enhanced Magnetic Resonance Imaging (DCE-MRI)':
                     if a<0.50:
                         st.success('The subject under consideration has BENIGN breast cancer.')
                         b=round(np.amax(predictions) * 100, 2)
-                        st.write("confidence score"+str(b))
+                        st.write("confidence score "+str(b))
                     else:
                         st.error('The subject under consideration has MALIGNANT breast cancer.')
                         b=round(np.amax(predictions) * 100, 2)
-                        st.write("confidence score"+str(b))
+                        st.write("confidence score "+str(b))
 elif dia_opt=='Biopsy= basic confirmation':
             st.subheader('This tool is to diagnose and predict for the presence of breast cancer based on histopathological imaging.')
             st.subheader('The user is requested to upload the histopathological image of the breast obtained from biopsy.')
@@ -231,11 +231,11 @@ elif dia_opt=='Biopsy= basic confirmation':
                     if a<0.50:
                         st.success('The subject under consideration has BENIGN breast cancer.')
                         b=round(np.amax(predictions) * 100, 2)
-                        st.write("confidence score"+str(b))
+                        st.write("confidence score "+str(b))
                     else:
                         st.error('The subject under consideration has MALIGNANT breast cancer.')
                         b=round(np.amax(predictions) * 100, 2)
-                        st.write("confidence score"+str(b))
+                        st.write("confidence score "+str(b))
 elif dia_opt=='Biopsy= IDC confirmation':
             st.subheader('This tool is to diagnose and predict for the presence of invasive ductal carcinoma (IDC) based on biopsy imaging.')
             st.subheader('The user is requested to upload the histopathological image of the breast obtained from biopsy.')
@@ -263,11 +263,11 @@ elif dia_opt=='Biopsy= IDC confirmation':
                     if a<0.50:
                         st.success('The subject under consideration deos not have IDC breast cancer.')
                         b=round(np.amax(predictions) * 100, 2)
-                        st.write("confidence score"+str(b))
+                        st.write("confidence score "+str(b))
                     else:
                         st.error('The subject under consideration has IDC breast cancer.')
                         b=round(np.amax(predictions) * 100, 2)
-                        st.write("confidence score"+str(b))
+                        st.write("confidence score "+str(b))
 st.subheader('TEAM MEMBERS')
 st.success('1. V.A.SAIRAM')
 st.success('2. SAMYUKTHA KAPOOR')
