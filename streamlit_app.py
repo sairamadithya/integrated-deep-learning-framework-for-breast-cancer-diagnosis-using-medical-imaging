@@ -12,7 +12,6 @@ import pandas as pd
 import numpy as np
 from tensorflow.keras.preprocessing import image
 from PIL import Image, ImageOps
-import cv2
 
 html_temp = """ 
   <div style="background-color:pink ;padding:8px">
