@@ -4,4 +4,4 @@ keras
 numpy
 pandas
 pillow
-cv2
+opencv-python
